@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arepas con Todo 🔥</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<meta name="theme-color" content="#0f0f0f">
+</head>
+
+<body>
+
+<div id="offline-banner" class="offline hidden">
+  <i class='bx bx-wifi-off'></i> Sin conexión
+</div>
+
+<main id="app"></main>
+
+<nav class="navbar">
+  <a href="/" data-link><i class='bx bx-home'></i></a>
+  <a href="/menu" data-link><i class='bx bx-food-menu'></i></a>
+  <a href="/carrito" data-link><i class='bx bx-cart'></i></a>
+  <a href="/cuenta" data-link><i class='bx bx-user'></i></a>
+</nav>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>

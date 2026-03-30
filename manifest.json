@@ -1,0 +1,15 @@
+{
+  "name":"Arepas con Todo",
+  "short_name":"Arepas",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#0f0f0f",
+  "theme_color":"#ff3c00",
+  "icons":[
+    {
+      "src":"assets/icons/icon-192.png",
+      "sizes":"192x192",
+      "type":"image/png"
+    }
+  ]
+}

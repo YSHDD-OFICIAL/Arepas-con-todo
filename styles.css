@@ -1,0 +1,104 @@
+:root{
+  --bg:#0f0f0f;
+  --card:#1a1a1a;
+  --primary:#ff3c00;
+  --accent:#ffcc00;
+}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  background:var(--bg);
+  color:#fff;
+}
+
+/* NAV */
+.navbar{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  background:#111;
+  padding:12px;
+}
+
+.navbar i{
+  font-size:24px;
+  color:var(--accent);
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  padding:15px;
+  margin:10px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(255,60,0,.2);
+}
+
+/* BOTÓN */
+button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:var(--primary);
+  border:none;
+  border-radius:8px;
+  color:#fff;
+}
+
+/* INPUT */
+input, textarea{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+
+/* AUTH */
+.auth{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:80vh;
+  padding:20px;
+}
+
+/* IA */
+.ai-box{
+  border:1px solid var(--primary);
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 5px var(--primary);}
+  50%{box-shadow:0 0 20px var(--primary);}
+  100%{box-shadow:0 0 5px var(--primary);}
+}
+
+/* LOADER */
+.loader{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:80vh;
+}
+
+.spinner{
+  width:50px;
+  height:50px;
+  border:5px solid #333;
+  border-top:5px solid var(--primary);
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg);}
+}
+
+.hidden{display:none;}
