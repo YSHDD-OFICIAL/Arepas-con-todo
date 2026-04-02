@@ -7,34 +7,56 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="La mejor experiencia en arepas urbanas. Regístrate y disfruta de nuestros productos.">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+  <!-- Pre-redirección ultrarrápida si ya hay sesión activa -->
+  <script>
+    // Verificación inmediata de sesión antes de cargar la UI
+    (function() {
+      try {
+        const sessionData = localStorage.getItem('arepas_session');
+        if (sessionData) {
+          const { timestamp } = JSON.parse(sessionData);
+          // Sesión válida por 30 días
+          if (Date.now() - timestamp < 30 * 24 * 3600000) {
+            window.location.replace('menu.html');
+          } else {
+            localStorage.removeItem('arepas_session');
+          }
+        }
+      } catch(e) {
+        console.warn('Error al validar sesión');
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="app-container">
     <div class="auth-card">
       <div class="logo">🔥 AREPAS CON TODO</div>
       <div class="tabs">
-        <button class="tab-btn active" data-tab="login">Iniciar sesión</button>
-        <button class="tab-btn" data-tab="register">Registrarse</button>
+        <button class="tab-btn active" data-tab="login" type="button">Iniciar sesión</button>
+        <button class="tab-btn" data-tab="register" type="button">Registrarse</button>
       </div>
       <form id="login-form" class="auth-form active">
-        <input type="email" id="login-email" placeholder="Correo electrónico" autocomplete="email" required>
-        <input type="password" id="login-password" placeholder="Contraseña" autocomplete="current-password" required>
+        <input type="email" id="login-email" placeholder="Correo electrónico" autocomplete="email" required aria-label="Correo electrónico">
+        <input type="password" id="login-password" placeholder="Contraseña" autocomplete="current-password" required aria-label="Contraseña">
         <button type="submit" class="btn-primary glow">Ingresar</button>
         <div class="auth-extra">
           <button type="button" id="import-account-btn" class="link-btn">📥 Importar cuenta</button>
         </div>
       </form>
       <form id="register-form" class="auth-form">
-        <input type="email" id="reg-email" placeholder="Correo electrónico" autocomplete="email" required>
-        <input type="password" id="reg-password" placeholder="Contraseña" autocomplete="new-password" required>
-        <input type="text" id="reg-ref-code" placeholder="Código de referido (opcional)">
+        <input type="email" id="reg-email" placeholder="Correo electrónico" autocomplete="email" required aria-label="Correo electrónico">
+        <input type="password" id="reg-password" placeholder="Contraseña" autocomplete="new-password" required aria-label="Contraseña">
+        <input type="text" id="reg-ref-code" placeholder="Código de referido (opcional)" autocomplete="off" aria-label="Código de referido">
         <button type="submit" class="btn-primary">Crear cuenta</button>
         <div class="auth-extra">
           <button type="button" id="export-account-btn" class="link-btn">📤 Exportar cuenta</button>
         </div>
       </form>
-      <div id="auth-message" class="message"></div>
+      <div id="auth-message" class="message" role="status" aria-live="polite"></div>
     </div>
   </div>
   <script type="module" src="main.js"></script>
