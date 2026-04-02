@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito · Arepas con Todo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="main-header">
+      <button class="back-btn" id="back-btn">←</button>
+      <h1>🛒 Tu pedido</h1>
+      <a href="cuenta.html" class="user-icon">👤</a>
+    </header>
+
+    <div id="cart-items" class="cart-list"></div>
+    
+    <div class="coupon-section">
+      <input type="text" id="coupon-code" placeholder="Código de descuento">
+      <button id="apply-coupon" class="btn-secondary">Aplicar</button>
+      <span id="coupon-feedback"></span>
+    </div>
+
+    <div class="loyalty-section">
+      <p>✨ Tus puntos: <span id="user-points">0</span></p>
+      <button id="redeem-points" class="btn-secondary">Canjear 100 puntos ($1000 descuento)</button>
+    </div>
+
+    <div class="cart-summary">
+      <p>Subtotal: <strong id="cart-subtotal">$0</strong></p>
+      <p id="discount-line" class="hidden">Descuento: -<strong id="discount-amount">$0</strong></p>
+      <p>Total: <strong id="cart-total">$0</strong></p>
+      <button id="repeat-order-btn" class="btn-secondary">🔄 Repetir último pedido</button>
+    </div>
+
+    <div class="payment-section">
+      <h3>Método de pago</h3>
+      <div class="payment-methods">
+        <label><input type="radio" name="payment" value="nequi" checked> 🟣 Nequi (3002647618)</label>
+        <label><input type="radio" name="payment" value="transfer"> 🏦 Transferencia Bancolombia</label>
+      </div>
+      <button id="confirm-payment-btn" class="btn-primary glow">✅ Ya pagué · Enviar comprobante</button>
+    </div>
+
+    <div id="payment-message" class="message"></div>
+    <div class="offline-banner hidden" id="offline-banner">📡 Sin conexión</div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
