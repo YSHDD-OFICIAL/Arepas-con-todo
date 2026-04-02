@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Menú · Arepas con Todo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="app-container">
+    <header class="main-header">
+      <button class="menu-toggle" id="nav-toggle">🍔</button>
+      <h1>🔥 Nuestras Arepas</h1>
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+        <a href="cuenta.html" class="user-icon">👤</a>
+      </div>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav hidden">
+      <a href="menu.html">🍔 Menú</a>
+      <a href="carrito.html">🛒 Carrito</a>
+      <a href="cuenta.html">👤 Mi cuenta</a>
+      <a href="admin.html" id="admin-link" class="hidden">🔧 Admin</a>
+    </nav>
+
+    <div class="search-filter">
+      <input type="text" id="search-input" placeholder="Buscar arepa...">
+      <select id="category-filter">
+        <option value="all">Todas</option>
+        <option value="clasicas">Clásicas</option>
+        <option value="especiales">Especiales</option>
+        <option value="veggie">Veggie</option>
+      </select>
+    </div>
+
+    <div id="products-container" class="products-grid"></div>
+
+    <div class="offline-banner hidden" id="offline-banner">
+      📡 Sin conexión - Los datos pueden estar desactualizados
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
