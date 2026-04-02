@@ -1,15 +1,82 @@
 {
-  "name":"Arepas con Todo",
-  "short_name":"Arepas",
-  "start_url":"/",
-  "display":"standalone",
-  "background_color":"#0f0f0f",
-  "theme_color":"#ff3c00",
-  "icons":[
+  "name": "Deliciosas Arepas con Todo",
+  "short_name": "ArepasTodo",
+  "description": "La mejor experiencia en arepas urbanas",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
     {
-      "src":"assets/icons/icon-192.png",
-      "sizes":"192x192",
-      "type":"image/png"
+      "src": "assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver menú",
+      "short_name": "Menú",
+      "description": "Ver todas las arepas",
+      "url": "/menu.html",
+      "icons": [{ "src": "assets/icons/icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Mi carrito",
+      "short_name": "Carrito",
+      "description": "Ver mi pedido actual",
+      "url": "/carrito.html",
+      "icons": [{ "src": "assets/icons/icon-96.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/menu.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["food", "lifestyle", "shopping"],
+  "lang": "es",
+  "dir": "ltr"
 }
