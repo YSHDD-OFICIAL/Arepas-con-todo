@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Deliciosas Arepas con Todo · Acceso</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+</head>
+<body>
+  <div class="app-container">
+    <div class="auth-card">
+      <div class="logo">🔥 AREPAS CON TODO</div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="login">Iniciar sesión</button>
+        <button class="tab-btn" data-tab="register">Registrarse</button>
+      </div>
+      <form id="login-form" class="auth-form active">
+        <input type="email" id="login-email" placeholder="Correo electrónico" autocomplete="email" required>
+        <input type="password" id="login-password" placeholder="Contraseña" autocomplete="current-password" required>
+        <button type="submit" class="btn-primary glow">Ingresar</button>
+        <div class="auth-extra">
+          <button type="button" id="import-account-btn" class="link-btn">📥 Importar cuenta</button>
+        </div>
+      </form>
+      <form id="register-form" class="auth-form">
+        <input type="email" id="reg-email" placeholder="Correo electrónico" autocomplete="email" required>
+        <input type="password" id="reg-password" placeholder="Contraseña" autocomplete="new-password" required>
+        <input type="text" id="reg-ref-code" placeholder="Código de referido (opcional)">
+        <button type="submit" class="btn-primary">Crear cuenta</button>
+        <div class="auth-extra">
+          <button type="button" id="export-account-btn" class="link-btn">📤 Exportar cuenta</button>
+        </div>
+      </form>
+      <div id="auth-message" class="message"></div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
