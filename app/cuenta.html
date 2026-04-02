@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi cuenta · Arepas con Todo</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0a">
+  <!-- Protección de ruta -->
+  <script>
+    (function() {
+      try {
+        const sessionData = localStorage.getItem('arepas_session');
+        if (!sessionData) {
+          window.location.replace('index.html');
+          return;
+        }
+        const { timestamp } = JSON.parse(sessionData);
+        if (Date.now() - timestamp >= 30 * 24 * 3600000) {
+          localStorage.removeItem('arepas_session');
+          window.location.replace('index.html');
+        }
+      } catch(e) {
+        window.location.replace('index.html');
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="app-container">
