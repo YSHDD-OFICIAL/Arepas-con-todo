@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cuenta · Arepas con Todo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="main-header">
+      <button class="back-btn" id="back-btn">←</button>
+      <h1>👤 Mi cuenta</h1>
+      <button id="logout-btn" class="logout-icon">🚪</button>
+    </header>
+
+    <div class="profile-card">
+      <p><strong>Email:</strong> <span id="user-email"></span></p>
+      <p><strong>Puntos totales:</strong> <span id="total-points">0</span></p>
+      <button id="theme-toggle" class="btn-secondary">🌓 Modo claro/oscuro</button>
+      <button id="export-account-btn" class="btn-secondary">📤 Exportar cuenta</button>
+      <button id="import-account-btn" class="btn-secondary">📥 Importar cuenta</button>
+      <button id="download-data-btn" class="btn-secondary">📥 Descargar mis datos (GDPR)</button>
+    </div>
+
+    <div class="referral-section">
+      <h3>👥 Invita a tus amigos</h3>
+      <p>Tu código: <strong id="ref-code"></strong></p>
+      <button id="share-ref-btn" class="btn-secondary">📤 Compartir enlace</button>
+      <p>Has referido: <span id="ref-count">0</span> amigos</p>
+    </div>
+
+    <div class="achievements-section">
+      <h3>🏆 Mis logros</h3>
+      <div id="achievements-list" class="achievements-grid"></div>
+    </div>
+
+    <div class="favorites-section">
+      <h3>❤️ Mis arepas favoritas</h3>
+      <div id="favorites-list" class="products-grid small-grid"></div>
+    </div>
+
+    <div class="ai-recommendations">
+      <h3>🤖 Recomendado para ti</h3>
+      <div id="recommendations-list" class="products-grid small-grid"></div>
+    </div>
+
+    <div class="order-history">
+      <h3>📜 Historial de pedidos</h3>
+      <div id="order-history-list"></div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
